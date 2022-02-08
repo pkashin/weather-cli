@@ -13,5 +13,10 @@
     "weather"
   ],
   "author": "Pavel Kashin",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.25.0"
+  },
+  "devDependencies": {
+  }
 }
