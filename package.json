@@ -17,6 +17,10 @@
   ],
   "author": "Pavel Kashin",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pkashin/weather-cli.git"
+  },
   "dependencies": {
     "axios": "^0.25.0",
     "chalk": "^5.0.0",
