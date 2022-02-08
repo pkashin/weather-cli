@@ -18,8 +18,8 @@
   "author": "Pavel Kashin",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.25.0"
-  },
-  "devDependencies": {
+    "axios": "^0.25.0",
+    "chalk": "^5.0.0",
+    "dedent-js": "^1.0.1"
   }
 }
