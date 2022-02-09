@@ -17,6 +17,22 @@ const saveToken = async (token) => {
     }
 };
 
+const getForecast = async () => {
+    try {
+        // const weather = await getWeather('novosibirsk');
+        const weather = await getWeather(process.env.CITY);
+        console.log(weather);
+    } catch (e) {
+        if (e?.response?.status === 404) {
+            printError('Неверно указан город');
+        } else if (e?.response?.status === 401) {
+            printError('Неверно указан токен');
+        } else {
+            printError(e.message);
+        }
+    }
+};
+
 const initCLI = () => {
     const args = getArgs(process.argv);
     // console.log(process.env);
@@ -34,7 +50,8 @@ const initCLI = () => {
         return saveToken(args.t);
     }
     // Вывести погоду
-    getWeather('novosibirsk');
+    // getWeather('novosibirs');
+    getForecast();
 };
 
 initCLI();
